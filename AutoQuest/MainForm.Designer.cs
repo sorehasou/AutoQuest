@@ -33,6 +33,8 @@
             this.デバッグツール表示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.テストToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.更新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edaxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +49,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.更新ToolStripMenuItem,
             this.デバッグツール表示ToolStripMenuItem,
             this.テストToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -65,7 +68,8 @@
             // テストToolStripMenuItem
             // 
             this.テストToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alertToolStripMenuItem});
+            this.alertToolStripMenuItem,
+            this.edaxToolStripMenuItem});
             this.テストToolStripMenuItem.Name = "テストToolStripMenuItem";
             this.テストToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.テストToolStripMenuItem.Text = "テスト";
@@ -76,6 +80,20 @@
             this.alertToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alertToolStripMenuItem.Text = "alert";
             this.alertToolStripMenuItem.Click += new System.EventHandler(this.alertToolStripMenuItem_Click);
+            // 
+            // 更新ToolStripMenuItem
+            // 
+            this.更新ToolStripMenuItem.Name = "更新ToolStripMenuItem";
+            this.更新ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.更新ToolStripMenuItem.Text = "更新";
+            this.更新ToolStripMenuItem.Click += new System.EventHandler(this.更新ToolStripMenuItem_Click);
+            // 
+            // edaxToolStripMenuItem
+            // 
+            this.edaxToolStripMenuItem.Name = "edaxToolStripMenuItem";
+            this.edaxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.edaxToolStripMenuItem.Text = "edax";
+            this.edaxToolStripMenuItem.Click += new System.EventHandler(this.edaxToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -101,6 +119,8 @@
         private System.Windows.Forms.ToolStripMenuItem デバッグツール表示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem テストToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alertToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 更新ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edaxToolStripMenuItem;
     }
 }
 

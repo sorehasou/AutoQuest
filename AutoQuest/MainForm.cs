@@ -1,4 +1,5 @@
-﻿using CefSharp;
+﻿using AutoQuest.Edax;
+using CefSharp;
 using CefSharp.WinForms;
 using CefSharp.WinForms.Internals;
 using Microsoft.VisualBasic;
@@ -57,9 +58,12 @@ namespace AutoQuest
 
             CEFEngine = new ChromiumWebBrowser("http://wars.fm/reversi?lang=ja");
 
+            var nativeMethod = new Chromium.NativeMethod();
+            nativeMethod.CEFEngine = CEFEngine;
+
             CEFEngine.BrowserSettings = browserSettings;
             CEFEngine.Dock = DockStyle.Fill;
-            CEFEngine.RegisterJsObject("autoQuest", new Chromium.NativeMethod());
+            CEFEngine.RegisterJsObject("autoQuest", nativeMethod);
             CEFEngine.FrameLoadEnd += CEFEngine_FrameLoadEnd;
             cefsharpArea.Controls.Add(CEFEngine);
         }
@@ -81,6 +85,16 @@ namespace AutoQuest
         }
 
         private void alertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 更新ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CEFEngine.Reload();
+        }
+
+        private void edaxToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
