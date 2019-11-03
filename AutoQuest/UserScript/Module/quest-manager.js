@@ -35,7 +35,7 @@
             var mode = $(".player0 .name.turn0").length === 1 ? 1 : 0;
             autoQuest.startOthello(mode);
 
-            if ($('mask').length === 0) {
+            if ($('.mask').length === 0) {
                 var mask = $('<div class=mask />');
                 mask.css({
                     'position': 'absolute',
@@ -43,7 +43,7 @@
                     'right': 0,
                     'bottom': 0,
                     'left': 0,
-                    'background-color': 'rgba(0, 208, 255, 0.3)',
+                    'background-color': 'rgba(27, 0, 255, 0.32)',
                     'z-index': 100
                 });
                 var text = $('<div>自動操作中</div>');
