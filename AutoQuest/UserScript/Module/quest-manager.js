@@ -63,9 +63,9 @@
             }
         }
     };
-
+    
     // 定期コール
-    setInterval(function () {
+    (function timer() {
         if ($("#game").css('display') !== 'none')
             $("#play-again-button").click();
 
@@ -77,5 +77,7 @@
             'transform': 'translate(-50%, -50%)',
             'width': '500px'
         });
-    }, 1000);
+
+        setTimeout(timer, 1000);
+    })();
 })();
