@@ -29,34 +29,42 @@
         private void InitializeComponent()
         {
             this.cefsharpArea = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.devMenu = new System.Windows.Forms.MenuStrip();
+            this.更新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.デバッグツール表示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.テストToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.更新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edaxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.devMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // cefsharpArea
             // 
             this.cefsharpArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cefsharpArea.Location = new System.Drawing.Point(0, 24);
+            this.cefsharpArea.Location = new System.Drawing.Point(0, 0);
             this.cefsharpArea.Name = "cefsharpArea";
-            this.cefsharpArea.Size = new System.Drawing.Size(456, 631);
+            this.cefsharpArea.Size = new System.Drawing.Size(456, 655);
             this.cefsharpArea.TabIndex = 0;
             // 
-            // menuStrip1
+            // devMenu
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.devMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.更新ToolStripMenuItem,
             this.デバッグツール表示ToolStripMenuItem,
             this.テストToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(456, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.devMenu.Location = new System.Drawing.Point(0, 0);
+            this.devMenu.Name = "devMenu";
+            this.devMenu.Size = new System.Drawing.Size(456, 24);
+            this.devMenu.TabIndex = 1;
+            this.devMenu.Text = "menuStrip1";
+            this.devMenu.Visible = false;
+            // 
+            // 更新ToolStripMenuItem
+            // 
+            this.更新ToolStripMenuItem.Name = "更新ToolStripMenuItem";
+            this.更新ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.更新ToolStripMenuItem.Text = "更新";
+            this.更新ToolStripMenuItem.Click += new System.EventHandler(this.更新ToolStripMenuItem_Click);
             // 
             // デバッグツール表示ToolStripMenuItem
             // 
@@ -77,21 +85,14 @@
             // alertToolStripMenuItem
             // 
             this.alertToolStripMenuItem.Name = "alertToolStripMenuItem";
-            this.alertToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alertToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.alertToolStripMenuItem.Text = "alert";
             this.alertToolStripMenuItem.Click += new System.EventHandler(this.alertToolStripMenuItem_Click);
-            // 
-            // 更新ToolStripMenuItem
-            // 
-            this.更新ToolStripMenuItem.Name = "更新ToolStripMenuItem";
-            this.更新ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.更新ToolStripMenuItem.Text = "更新";
-            this.更新ToolStripMenuItem.Click += new System.EventHandler(this.更新ToolStripMenuItem_Click);
             // 
             // edaxToolStripMenuItem
             // 
             this.edaxToolStripMenuItem.Name = "edaxToolStripMenuItem";
-            this.edaxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.edaxToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.edaxToolStripMenuItem.Text = "edax";
             this.edaxToolStripMenuItem.Click += new System.EventHandler(this.edaxToolStripMenuItem_Click);
             // 
@@ -101,12 +102,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 655);
             this.Controls.Add(this.cefsharpArea);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.devMenu);
+            this.MainMenuStrip = this.devMenu;
             this.Name = "MainForm";
             this.Text = "AutoQuest";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.devMenu.ResumeLayout(false);
+            this.devMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,7 +116,7 @@
         #endregion
 
         private System.Windows.Forms.Panel cefsharpArea;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip devMenu;
         private System.Windows.Forms.ToolStripMenuItem デバッグツール表示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem テストToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alertToolStripMenuItem;
