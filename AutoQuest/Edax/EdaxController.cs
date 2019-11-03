@@ -21,7 +21,8 @@ namespace AutoQuest.Edax
                 Start();
             }
 
-            WriteLine("level 20");
+            WriteLine("n 1");
+            WriteLine("level 22");
             WriteLine("mode " + mode);
             WriteLine("init");
         }
