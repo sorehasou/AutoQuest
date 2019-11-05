@@ -8,6 +8,8 @@ namespace AutoQuest.Chromium
 {
     public class NativeMethod
     {
+        public static bool IsOneMinuteMode = false;
+
         public ChromiumWebBrowser CEFEngine;
 
         public Random Random = new Random();
@@ -29,7 +31,10 @@ namespace AutoQuest.Chromium
                 var y = int.Parse(line[12].ToString()) - 1;
                 var eval = "$('div.square[data-x=" + x + "][data-y=" + y + "]').click()";
                 // Console.WriteLine(x + ", " + y);
-                await Task.Delay(1000 + Random.Next(2000));
+
+                if (IsOneMinuteMode) await Task.Delay(1000);
+                else await Task.Delay(1000 + Random.Next(2000));
+
                 CEFEngine.ExecuteScriptAsync(eval);
             }
         }

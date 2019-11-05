@@ -65,6 +65,8 @@ namespace AutoQuest
             CEFEngine.Dock = DockStyle.Fill;
             CEFEngine.RegisterJsObject("autoQuest", nativeMethod);
             CEFEngine.FrameLoadEnd += CEFEngine_FrameLoadEnd;
+            CEFEngine.MenuHandler = new Chromium.CustomMenuHandler();
+
             cefsharpArea.Controls.Add(CEFEngine);
         }
 

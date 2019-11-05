@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chromium\CustomMenuHandler.cs" />
     <Compile Include="Chromium\NativeMethod.cs" />
     <Compile Include="Edax\EdaxController.cs" />
     <Compile Include="MainForm.cs">
