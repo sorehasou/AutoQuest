@@ -45,12 +45,15 @@ namespace AutoQuest.Edax
 
         public static void WriteLine(string value)
         {
+            Console.WriteLine("[edax] WriteLine: {0}", value);
             EdaxProcess.StandardInput.WriteLine(value);
         }
 
         public static string ReadLine()
         {
-            return EdaxProcess.StandardOutput.ReadLine();
+            var value = EdaxProcess.StandardOutput.ReadLine();
+            Console.WriteLine("[edax] ReadLine: {0}", value);
+            return value;
         }
     }
 }

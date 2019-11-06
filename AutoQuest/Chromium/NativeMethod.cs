@@ -22,8 +22,6 @@ namespace AutoQuest.Chromium
         [JavascriptIgnore]
         public async void EdaxPlays(string line)
         {
-            Console.WriteLine(line);
-
             if (line.StartsWith("Edax plays"))
             {
                 var map = "ABCDEFGH";
